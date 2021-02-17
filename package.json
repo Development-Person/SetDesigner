@@ -1,0 +1,23 @@
+{
+  "name": "setdesigner",
+  "version": "1.0.0",
+  "description": "dj set designer",
+  "main": "index.js",
+  "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Development-Person/SetDesigner.git"
+  },
+  "author": "Ibrahim Achkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Development-Person/SetDesigner/issues"
+  },
+  "homepage": "https://github.com/Development-Person/SetDesigner#readme"
+}
