@@ -44,8 +44,8 @@ h3 {
 
 /* audio picker */
 .audiobox {
-  width: 150px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   background-color: rgb(222, 137, 243);
   color: rgb(70, 69, 69);
   border-radius: 5px;
@@ -63,7 +63,7 @@ audio {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.fileUpload {
+/* .fileUpload {
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -78,4 +78,4 @@ audio {
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
-}
+} */
