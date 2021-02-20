@@ -1,12 +1,69 @@
+/* General body */
+* {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 body {
-  margin: 40px;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 1.5em 2fr 1.5em;
+  grid-template-areas:
+    'header header header'
+    'main main main'
+    'footer footer footer';
+}
+
+header,
+.main-content,
+.sidebar,
+footer {
+  padding: 2em;
+}
+
+header {
+  background: #1ecbe1;
+  grid-area: header;
+  align-content: center;
+}
+.main-content {
+  background: #fdfdfd;
+  grid-area: main;
+  margin: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+footer {
+  background: #1ecbe1;
+  grid-area: footer;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  color: white;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Main content - music box grid */
+
+.box-grid {
+  margin: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2em;
 }
 
 .box {
   width: 200px;
   height: 200px;
-  background-color: rgb(213, 250, 81);
-  color: rgb(70, 69, 69);
+  background-color: #e11ecb;
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
@@ -14,47 +71,25 @@ body {
 }
 
 .box:nth-child(even) {
-  background-color: rgb(221, 230, 218);
+  background-color: #cbe11e;
   color: #000;
-}
-
-.wrapper {
-  display: grid;
-  border: 1px #000;
-  grid-gap: 10px;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(250px, 2fr) minmax(250px, 2fr)
-  );
-  max-width: 100em;
-}
-
-h1,
-h2,
-h3,
-p {
-  font-family: 'Courier New', Courier, monospace;
-}
-
-h1,
-h2,
-h3 {
-  padding: 1em 0;
 }
 
 /* audio picker */
 .audiobox {
-  width: 160px;
-  height: 160px;
-  background-color: rgb(222, 137, 243);
-  color: rgb(70, 69, 69);
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+  width: 200px;
+  height: 200px;
   align-items: center;
+  justify-items: center;
 }
 
 audio {
+  width: 100%;
+  padding: 10px;
+}
+
+input {
+  padding: 10px;
   width: 100%;
 }
 
@@ -62,20 +97,3 @@ audio {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* .fileUpload {
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-}
-.fileUpload input.upload {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-} */
