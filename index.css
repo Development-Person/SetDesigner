@@ -8,6 +8,7 @@ body {
   gap: 2em;
   grid-template-columns: 1.5em 2fr 1.5em;
   grid-template-areas:
+    'nav nav nav'
     'header header header'
     'main main main'
     'footer footer footer';
@@ -42,6 +43,10 @@ h1 {
   font-size: 100px;
   text-align: center;
   color: white;
+}
+
+navbar {
+  grid-area: nav;
 }
 
 p {

@@ -35,7 +35,7 @@ function fileSelected(filelist) {
   let result = '';
   let fileinput = filelist.id;
 
-  const audioSourceFinder = () => {
+  const audioSourceAndResultFinder = () => {
     if (filelist.id === 'fileinput1') {
       audiosource = 'audiosource1';
       result = 'result1';
@@ -59,7 +59,7 @@ function fileSelected(filelist) {
     }
   };
 
-  audioSourceFinder();
+  audioSourceAndResultFinder();
 
   document.getElementById(result).innerHTML = fileinfo;
   document
@@ -69,3 +69,23 @@ function fileSelected(filelist) {
       URL.createObjectURL(document.getElementById(fileinput).files[0])
     );
 }
+
+//playing all files in order
+const playAll = async () => {
+  let order = [];
+  for (let i = 1; i <= 6; i++) {
+    let data = document.getElementById(`box${i}`).children;
+    order.push(`audiosource${data[0].id.slice(4)}`);
+  }
+
+  const getAudioPromise = (element) =>
+    new Promise((resolve) => {
+      let audio = document.getElementById(element);
+      audio.addEventListener('ended', resolve);
+      audio.play();
+    });
+
+  for (let i = 0; i <= 5; i++) {
+    await getAudioPromise(order[i]);
+  }
+};
