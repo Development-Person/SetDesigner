@@ -1,6 +1,6 @@
 /* General body */
 * {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: fantasy;
 }
 
 body {
@@ -21,13 +21,15 @@ footer {
   padding: 2em;
 }
 
+header,
+footer {
+  /* background: #13f6eb; */
+}
 header {
-  background: #1ecbe1;
   grid-area: header;
   align-content: center;
 }
 .main-content {
-  background: #fdfdfd;
   grid-area: main;
   margin: 1vh;
   display: grid;
@@ -35,7 +37,6 @@ header {
   gap: 2em;
 }
 footer {
-  background: #1ecbe1;
   grid-area: footer;
 }
 
@@ -55,6 +56,21 @@ p {
   color: white;
 }
 
+img {
+  max-width: 10%;
+  height: auto;
+  align-self: center;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 /* Main content - music box grid */
 
 .box-grid {
@@ -68,7 +84,7 @@ p {
 .box {
   width: 200px;
   height: 200px;
-  background-color: #e11ecb;
+  background-color: #eb13f6;
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
@@ -76,7 +92,7 @@ p {
 }
 
 .box:nth-child(even) {
-  background-color: #cbe11e;
+  background-color: #f6eb13;
   color: #000;
 }
 

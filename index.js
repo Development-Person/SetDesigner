@@ -81,11 +81,17 @@ const playAll = async () => {
   const getAudioPromise = (element) =>
     new Promise((resolve) => {
       let audio = document.getElementById(element);
-      audio.addEventListener('ended', resolve);
-      audio.play();
+      if (audio.src === 'http://:0/') {
+        resolve();
+      } else {
+        audio.addEventListener('ended', resolve);
+        audio.play();
+      }
     });
 
   for (let i = 0; i <= 5; i++) {
     await getAudioPromise(order[i]);
   }
+
+  console.log(`end of loop`);
 };

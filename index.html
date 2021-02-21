@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel='icon' href='favicon.ico?v=2' type='image/x-icon'/ >
     <link rel="stylesheet" href="index.css" />
     <script type="text/javascript" src="index.js" defer></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temp</title>
+    <title>SetDesigner</title>
   </head>
   <body>
     <navbar></navbar>
+    <video autoplay muted loop id="myVideo">
+      <source src="media\background.mp4" type="video/mp4">
+    </video>
     <header>
       <h1>Set Designer</h1>
     </header>
     <div class="main-content">
-      <div></div>
+      <div>
+        <image src="media\android-chrome-512x512.png"></image>
+        <image src="media\android-chrome-512x512.png"></image>
+        <image src="media\android-chrome-512x512.png"></image>
+        <image src="media\android-chrome-512x512.png"></image>
+      </div>
       <div class="box-grid">
         <div id="box1" class="box box1" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag1" class="audiobox" draggable="true" ondragstart="drag(event)">
               <div class="fileUpload btn btn-primary">
-                <audio  src="" controls="controls" id="audiosource1"></audio>
+                <audio  src="//:0" controls="controls" id="audiosource1"></audio>
                 <input class="upload" id="fileinput1" type="file" name="filechooser" accept="audio/*" onchange="fileSelected(this)"></input>
                 <p class="audioinfo" id="result1"></p>
               </div>      
@@ -28,7 +37,7 @@
           <div id="box2" class="box box2" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag2" class="audiobox" draggable="true" ondragstart="drag(event)">
               <div class="fileUpload btn btn-primary">
-                <audio  src="" controls="controls" id="audiosource2"></audio>
+                <audio  src="//:0" controls="controls" id="audiosource2"></audio>
                 <input class="upload" id="fileinput2" type="file" name="filechooser" accept="audio/*" onchange="fileSelected(this)"></input>
                 <p class="audioinfo" id="result2"></p>
               </div>      
@@ -37,7 +46,7 @@
           <div id="box3" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag3" class="audiobox" draggable="true" ondragstart="drag(event)">
               <div class="fileUpload btn btn-primary">
-                <audio  src="" controls="controls" id="audiosource3"></audio>
+                <audio  src="//:0" controls="controls" id="audiosource3"></audio>
                 <input class="upload" id="fileinput3" type="file" name="filechooser" accept="audio/*" onchange="fileSelected(this)"></input>
                 <p class="audioinfo" id="result3"></p>
               </div>      
@@ -46,7 +55,7 @@
           <div id="box4" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag4" class="audiobox" draggable="true" ondragstart="drag(event)">
             <div class="fileUpload btn btn-primary">
-              <audio  src="" controls="controls" id="audiosource4"></audio>
+              <audio  src="//:0" controls="controls" id="audiosource4"></audio>
               <input class="upload" id="fileinput4" type="file" name="filechooser" accept="audio/*" onchange="fileSelected(this)"></input>
               <p class="audioinfo" id="result4"></p>
             </div>      
@@ -54,7 +63,7 @@
           <div id="box5" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag5" class="audiobox" draggable="true" ondragstart="drag(event)">
             <div class="fileUpload btn btn-primary">
-              <audio  src="" controls="controls" id="audiosource5"></audio>
+              <audio  src="//:0" controls="controls" id="audiosource5"></audio>
               <input class="upload" id="fileinput5" type="file" name="filechooser" accept="audio/*" onchange="fileSelected(this)"></input>
               <p class="audioinfo" id="result5"></p>
             </div>      
@@ -62,15 +71,19 @@
           <div id="box6" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag6" class="audiobox" draggable="true" ondragstart="drag(event)">
             <div class="fileUpload btn btn-primary">
-              <audio  src="" controls="controls" id="audiosource6"></audio>
+              <audio  src="//:0" controls="controls" id="audiosource6"></audio>
               <input class="upload" id="fileinput6" type="file" name="filechooser" accept="audio/*" onchange="fileSelected(this)"></input>
               <p class="audioinfo" id="result6"></p>
             </div>      
            </div>
           </div>
+          <button onclick="playAll()">Play</button>
       </div>
       <div>
-        <button onclick="playAll()">Play</button>
+        <image src="media\android-chrome-512x512.png"></image>
+        <image src="media\android-chrome-512x512.png"></image>
+        <image src="media\android-chrome-512x512.png"></image>
+        <image src="media\android-chrome-512x512.png"></image>
       </div>
     </div>
     <footer><p>created by DJ Halp!!!</p></footer>
