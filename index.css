@@ -1,49 +1,55 @@
 /* General body */
 * {
-  font-family: fantasy;
+  /* font-family: 'DotGothic16', sans-serif; */
+  font-family: 'Orbitron', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
 body {
+  background-image: radial-gradient(#fafafa 10%, transparent 0%),
+    radial-gradient(#fafafa 10%, transparent 0%);
+  background-color: #13f6eb;
+  background-position: 0 0, 50px 50px;
+  background-size: 20px 20px;
+
   display: grid;
-  gap: 2em;
-  grid-template-columns: 1.5em 2fr 1.5em;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     'nav nav nav'
     'header header header'
     'main main main'
+    '. play .'
     'footer footer footer';
 }
 
-header,
-.main-content,
-.sidebar,
-footer {
+.main-content {
   padding: 2em;
 }
 
-header,
-footer {
-  /* background: #13f6eb; */
-}
 header {
   grid-area: header;
   align-content: center;
 }
 .main-content {
   grid-area: main;
-  margin: 1vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
 }
 footer {
   grid-area: footer;
+  padding-top: 2em;
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 150px;
   text-align: center;
-  color: white;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000,
+    1px 1px 1px #000;
 }
 
 navbar {
@@ -51,24 +57,10 @@ navbar {
 }
 
 p {
-  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0.25);
+  font-size: 40px;
   text-align: center;
   color: white;
-}
-
-img {
-  max-width: 10%;
-  height: auto;
-  align-self: center;
-}
-
-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
 }
 
 /* Main content - music box grid */
@@ -76,19 +68,27 @@ video {
 .box-grid {
   margin: 1vh;
   display: grid;
+  place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 2em;
+  gap: 6em;
 }
 
 .box {
+  box-shadow: 20px 20px 0px 5px black;
   width: 200px;
   height: 200px;
   background-color: #eb13f6;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 30px;
+  padding: 30px;
   font-size: 150%;
   align-items: center;
+  transition: transform 400ms, box-shadow 400ms;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 40px 40px 5px 2px black;
 }
 
 .box:nth-child(even) {
@@ -96,12 +96,41 @@ video {
   color: #000;
 }
 
+.box p {
+  color: black;
+}
+
+button {
+  border: 0em;
+  background-color: black;
+  color: white;
+  font-size: 200%;
+  border-radius: 30px;
+  width: 200px;
+  height: 100px;
+  transition: color 1000ms;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.control-button {
+  display: inline;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.buttons {
+  grid-area: play;
+  padding-top: 5em;
+}
+
 /* audio picker */
 .audiobox {
   width: 200px;
   height: 200px;
-  align-items: center;
-  justify-items: center;
 }
 
 audio {

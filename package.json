@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Development-Person/SetDesigner/issues"
   },
-  "homepage": "https://github.com/Development-Person/SetDesigner#readme"
+  "homepage": "https://github.com/Development-Person/SetDesigner#readme",
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2016",
+    "jsx": "preserve",
+    "baseUrl": "."
+  }
 }

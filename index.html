@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Orbitron&display=swap" rel="stylesheet">
     <link rel='icon' href='favicon.ico?v=2' type='image/x-icon'/ >
     <link rel="stylesheet" href="index.css" />
     <script type="text/javascript" src="index.js" defer></script>
@@ -11,19 +13,11 @@
   </head>
   <body>
     <navbar></navbar>
-    <video autoplay muted loop id="myVideo">
-      <source src="media\background.mp4" type="video/mp4">
-    </video>
     <header>
-      <h1>Set Designer</h1>
+      <h1>set designer.</h1>
     </header>
     <div class="main-content">
-      <div>
-        <image src="media\android-chrome-512x512.png"></image>
-        <image src="media\android-chrome-512x512.png"></image>
-        <image src="media\android-chrome-512x512.png"></image>
-        <image src="media\android-chrome-512x512.png"></image>
-      </div>
+      <div></div>
       <div class="box-grid">
         <div id="box1" class="box box1" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="drag1" class="audiobox" draggable="true" ondragstart="drag(event)">
@@ -77,15 +71,13 @@
             </div>      
            </div>
           </div>
-          <button onclick="playAll()">Play</button>
+        </div>
+        <div></div>
       </div>
-      <div>
-        <image src="media\android-chrome-512x512.png"></image>
-        <image src="media\android-chrome-512x512.png"></image>
-        <image src="media\android-chrome-512x512.png"></image>
-        <image src="media\android-chrome-512x512.png"></image>
-      </div>
-    </div>
-    <footer><p>created by DJ Halp!!!</p></footer>
+      <div class='buttons'>
+      <div class="control-button"><button onclick="playAll()">Play</button></div>
+      <div class="control-button"><button onclick="stopAll()">Stop</button></div>
+       </div>
+      <footer><p>you're welcome</p></footer>
   </body>
 </html>
